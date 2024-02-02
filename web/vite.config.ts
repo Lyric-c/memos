@@ -12,7 +12,7 @@ if (process.env.DEV_PROXY_SERVER && process.env.DEV_PROXY_SERVER.length > 0) {
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: "0.0.0.0",
+    host: "a.941216.xyz",
     port: 3001,
     proxy: {
       "^/api": {
