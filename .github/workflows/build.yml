@@ -32,8 +32,8 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ${{us15.me0.cn}}
-          username: ${{web1064}}
-          password: ${{0kvzQ8ml}}
+          server: ${{ us15.me0.cn }}
+          username: ${{ web1064 }}
+          password: ${{ 0kvzQ8ml }}
           local-dir: /web
           remote-dir: /memos
