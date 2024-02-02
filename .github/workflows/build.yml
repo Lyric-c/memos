@@ -29,11 +29,12 @@ jobs:
         run: pnpm run build
         working-directory: web
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ${{ us15.me0.cn }}
-          username: ${{ web1064 }}
-          password: ${{ 0kvzQ8ml }}
+          server: us15.me0.cn
+          username: web1064
+          password: 0kvzQ8ml
           local-dir: /web
-          remote-dir: /memos
+          server-dir: /WEB/memos/
+          timeout: 10000
