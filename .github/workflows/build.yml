@@ -20,7 +20,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/setup-pnpm@v1
-        working-directory: web
 
       - name: Install dependencies
         run: pnpm install
@@ -28,6 +27,7 @@ jobs:
 
       - name: Build
         run: pnpm run build
+        working-directory: web
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
