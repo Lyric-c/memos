@@ -23,9 +23,7 @@ jobs:
           version: 8
 
       - name: Install dependencies
-        run: pnpm install -w ./web
-          #working-directory: web
+        run: pnpm install -w web
 
       - name: Build
-        run: pnpm build -w ./web
-          #working-directory: web
+        run: pnpm build -w web
