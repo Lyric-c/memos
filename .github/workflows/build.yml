@@ -18,12 +18,19 @@ jobs:
         with:
           node-version: '18'
 
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
+      - name: test
+        run: |
+          pwd
+          ls -lh
+          which pnpm
+          pnpm --help
 
-      - name: Install dependencies
-        run: pnpm install -w web
+      # - uses: pnpm/action-setup@v2
+      #   with:
+      #     version: 8
 
-      - name: Build
-        run: pnpm build -w web
+      # - name: Install dependencies
+      #   run: pnpm install -w web
+
+      # - name: Build
+      #   run: pnpm build -w web
