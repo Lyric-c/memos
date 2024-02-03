@@ -23,15 +23,15 @@ jobs:
         with:
           version: 8
 
-      - name: test
-        run: |
-          pwd
-          ls -lh
-          which pnpm
-          pnpm --help
+      # - name: test
+      #   run: |
+      #     pwd
+      #     ls -lh
+      #     which pnpm
+      #     pnpm --help
 
-      # - name: Install dependencies
-      #   run: pnpm install -w web
+      - name: Install dependencies
+        run: pnpm install -C ./web
 
-      # - name: Build
-      #   run: pnpm build -w web
+      - name: Build
+        run: pnpm build -C ./web
