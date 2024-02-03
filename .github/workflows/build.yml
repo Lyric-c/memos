@@ -23,19 +23,9 @@ jobs:
           version: 8
 
       - name: Install dependencies
-        run: pnpm install
-        working-directory: web
+        run: pnpm install -w ./web
+          #working-directory: web
 
       - name: Build
-        run: pnpm run build
-        working-directory: web
-
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
-        with:
-          server: us15.me0.cn
-          username: web1064
-          password: 0kvzQ8ml
-          local-dir: /web
-          server-dir: /WEB/memos/
-          timeout: 10000
+        run: pnpm build -w ./web
+          #working-directory: web
