@@ -34,4 +34,4 @@ jobs:
         run: npm install ./web
 
       - name: Build
-        run: npm build ./web
+        run: npm run build ./web
