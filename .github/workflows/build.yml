@@ -31,7 +31,7 @@ jobs:
       #     pnpm --help
 
       - name: Install dependencies
-        run: pnpm install -C web
+        run: pnpm -C ./web install 
 
       - name: Build
-        run: pnpm build -C web
+        run: pnpm -C ./web build
